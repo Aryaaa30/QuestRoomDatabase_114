@@ -19,4 +19,8 @@ class LocalRepositoryMhs(
     fun getMhs(nim: String): Flow<Mahasiswa> {
         return mahasiswaDao.getMahasiswa(nim)
     }
+
+    suspend fun deleteMhs(mahasiswa: Mahasiswa) {
+        mahasiswaDao.deleteMahasiswa(mahasiswa)
+    }
 }
