@@ -15,4 +15,8 @@ class LocalRepositoryMhs(
     fun getAllMhs(): Flow<List<Mahasiswa>> {
         return mahasiswaDao.getAllMahasiswa()
     }
+
+    fun getMhs(nim: String): Flow<Mahasiswa> {
+        return mahasiswaDao.getMahasiswa(nim)
+    }
 }
